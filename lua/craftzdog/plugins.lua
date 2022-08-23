@@ -13,6 +13,10 @@ packer.startup(function(use)
     'svrana/neosolarized.nvim',
     requires = { 'tjdevries/colorbuddy.nvim' }
   }
+  use {
+    'folke/tokyonight.nvim', -- Color Schemme
+    requires = { 'tjdevries/colorbuddy.nvim' }
+  }
   use 'nvim-lualine/lualine.nvim' -- Statusline
   use 'nvim-lua/plenary.nvim' -- Common utilities
   use 'onsails/lspkind-nvim' -- vscode-like pictograms
@@ -53,7 +57,8 @@ packer.startup(function(use)
   use "Yggdroot/indentLine" -- Indentation levels with vertical lines
 
   use "mattn/emmet-vim" -- Emmet (Ctrl+y ,)
-  use "folke/tokyonight.nvim" -- Color Schemme
+
+  -- use "folke/tokyonight.nvim" -- Color Schemme
 
   use "tpope/vim-liquid" -- Liquid plugin
 
