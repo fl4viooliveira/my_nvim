@@ -8,5 +8,20 @@ mason.setup({
 })
 
 lspconfig.setup {
-  ensure_installed = { "sumneko_lua", "tailwindcss" },
+  ensure_installed = {
+    -- lua 
+    "sumneko_lua",
+
+    -- web dev
+    "html",
+    "cssls",
+    "tailwindcss",
+    "tsserver",
+
+    -- shopify
+    "theme_check",
+
+    "emmet-ls",
+    "json-lsp",
+  },
 }
