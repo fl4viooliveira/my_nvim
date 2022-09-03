@@ -7,7 +7,7 @@ vim.opt.fileencoding = 'utf-8'
 vim.wo.relativenumber = true
 vim.wo.number = true
 
-vim.opt.mouse = 'a' 
+vim.opt.mouse = 'a'
 
 vim.opt.title = true -- set the title of window to the value of the titlestring
 vim.opt.autoindent = true
