@@ -71,6 +71,7 @@ nvim_lsp.tsserver.setup {
 }
 
 nvim_lsp.html.setup {
+  capabilities = capabilities,
   cmd = { "vscode-html-language-server", "--stdio" },
   filetypes = { "html" },
   init_options = {
@@ -81,7 +82,7 @@ nvim_lsp.html.setup {
     },
     provideFormatter = true,
   },
-  settings = {},
+    settings = {},
   single_file_support = true
 }
 
