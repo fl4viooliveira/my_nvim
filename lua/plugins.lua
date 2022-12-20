@@ -41,7 +41,28 @@ packer.startup(function(use)
   use 'nvim-telescope/telescope-file-browser.nvim'
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
-  use 'norcalli/nvim-colorizer.lua'
+
+  use 'folke/lua-dev.nvim'
+
+  use 'rafamadriz/friendly-snippets'
+
+  -- use 'norcalli/nvim-colorizer.lua'
+
+  use {
+  "norcalli/nvim-colorizer.lua",
+    config = function()
+      require("colorizer").setup({ "css", "scss", "html", "javascript" }, {
+          RGB = true, -- #RGB hex codes
+          RRGGBB = true, -- #RRGGBB hex codes
+          RRGGBBAA = true, -- #RRGGBBAA hex codes
+          rgb_fn = true, -- CSS rgb() and rgba() functions
+          hsl_fn = true, -- CSS hsl() and hsla() functions
+          css = true, -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
+          css_fn = true, -- Enable all CSS *functions*: rgb_fn, hsl_fn
+          })
+    end,
+  }
+  
   use 'folke/zen-mode.nvim'
   use({
     "iamcco/markdown-preview.nvim",
