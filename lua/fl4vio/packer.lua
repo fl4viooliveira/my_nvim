@@ -54,4 +54,63 @@ return require('packer').startup(function(use)
   use {"folke/trouble.nvim", cmd = "TroubleToggle"}
 
 
+  use {
+      "norcalli/nvim-colorizer.lua",
+      config = function()
+          require("colorizer").setup({ "css", "scss", "html", "javascript" }, {
+              RGB = true, -- #RGB hex codes
+              RRGGBB = true, -- #RRGGBB hex codes
+              RRGGBBAA = true, -- #RRGGBBAA hex codes
+              rgb_fn = true, -- CSS rgb() and rgba() functions
+              hsl_fn = true, -- CSS hsl() and hsla() functions
+              css = true, -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
+              css_fn = true, -- Enable all CSS *functions*: rgb_fn, hsl_fn
+          })
+      end,
+  }
+
+  use 'windwp/nvim-autopairs'
+  use 'windwp/nvim-ts-autotag'
+
+  use 'folke/zen-mode.nvim'
+
+  use "tpope/vim-liquid" -- Liquid plugin
+
+  use {
+    "folke/todo-comments.nvim",
+    event = "BufRead",
+    requires = "nvim-lua/plenary.nvim",
+    config = function()
+      require("todo-comments").setup()
+    end,
+  }
+
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+      require('Comment').setup()
+    end
+  }
+
+  use {
+      'nvim-lualine/lualine.nvim',
+      requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
+
+  use 'onsails/lspkind.nvim'
+
+  use "lukas-reineke/indent-blankline.nvim"
+
+  use "RRethy/vim-illuminate"
+
+  use({
+      "iamcco/markdown-preview.nvim",
+      run = function() vim.fn["mkdp#util#install"]() end,
+  })
+
+
+  use "mfussenegger/nvim-dap" -- Debug Adapter Protocol client implementation for Neovim
+  use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+
+
 end)
