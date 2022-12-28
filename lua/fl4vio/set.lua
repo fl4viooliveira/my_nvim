@@ -31,3 +31,9 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 
 vim.opt.clipboard = 'unnamedplus'
+
+vim.opt.path:append { '**' } -- Finding files - Search down into subfolders
+vim.opt.wildignore:append { '*/node_modules/*' }
+
+vim.opt.spell = true
+vim.opt.spelllang = "en"
