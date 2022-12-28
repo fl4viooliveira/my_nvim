@@ -119,7 +119,6 @@ packer.startup(function(use)
     })
 
 
-    
     use 'neovim/nvim-lspconfig'
     use 'jose-elias-alvarez/null-ls.nvim'
     use 'MunifTanjim/prettier.nvim'
@@ -128,5 +127,11 @@ packer.startup(function(use)
         'lewis6991/gitsigns.nvim',
         -- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
     }
+
+    use 'tamago324/nlsp-settings.nvim'
+
+    use 'rcarriga/nvim-notify'
+
+
 
 end)
