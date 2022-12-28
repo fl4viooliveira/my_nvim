@@ -20,6 +20,8 @@ packer.startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
+    use { "nvim-telescope/telescope-file-browser.nvim" }
+
 
     use 'folke/tokyonight.nvim'
 
