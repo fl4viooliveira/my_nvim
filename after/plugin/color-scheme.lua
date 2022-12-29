@@ -2,10 +2,30 @@ function MyColors(color)
     color = color or "tokyonight"
     vim.cmd.colorscheme(color)
 
-    vim.api.nvim_set_hl(0, "Normal", {bg = "none"})
-    vim.api.nvim_set_hl(0, "NormalFloat", {bg = "none"})
+    require("github-theme").setup({
+        theme_style = "dimmed",
+        -- theme_style = "dark",
+        transparent = true,
 
-    vim.g.tokyonight_italic_functions = true
+        function_style = "italic",
+        comment_style = "italic",
+        keyword_style = "italic",
+        variable_style = "italic",
+        sidebars = {"qf", "vista_kind", "terminal", "packer"},
+
+        -- Change the "hint" color to the "orange" color, and make the "error" color bright red
+        colors = {hint = "orange", error = "#ff0000"},
+
+        -- Overwrite the highlight groups
+        overrides = function(c)
+            return {
+                htmlTag = {fg = c.red, bg = "#282c34", sp = c.hint, style = "underline"},
+                DiagnosticHint = {link = "LspDiagnosticsDefaultHint"},
+                -- this will remove the highlight groups
+                TSField = {},
+            }
+        end
+    })
 
 end
 

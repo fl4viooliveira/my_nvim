@@ -132,6 +132,9 @@ packer.startup(function(use)
 
     use 'rcarriga/nvim-notify'
 
+    use 'projekt0n/github-nvim-theme'
+
+    -- use 'tribela/vim-transparent'
 
 
 end)
