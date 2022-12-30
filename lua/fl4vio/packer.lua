@@ -134,7 +134,7 @@ packer.startup(function(use)
 
     use 'projekt0n/github-nvim-theme'
 
-    -- use 'tribela/vim-transparent'
+    use 'junegunn/gv.vim'
 
 
 end)
