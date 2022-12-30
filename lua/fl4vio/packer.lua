@@ -136,5 +136,8 @@ packer.startup(function(use)
 
     use 'junegunn/gv.vim'
 
+    -- use 'znck/grammarly'
+
+
 
 end)
