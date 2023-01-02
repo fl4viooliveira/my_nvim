@@ -1,5 +1,7 @@
 function MyColors(color)
-    color = color or "tokyonight"
+    -- color = color or "tokyonight"
+    color = color or "gruvbox"
+
     vim.cmd.colorscheme(color)
 
     require("github-theme").setup({
@@ -26,6 +28,30 @@ function MyColors(color)
             }
         end
     })
+
+    require("gruvbox").setup({
+        undercurl = true,
+        underline = true,
+        bold = true,
+        italic = true,
+        strikethrough = true,
+        invert_selection = false,
+        invert_signs = false,
+        invert_tabline = false,
+        invert_intend_guides = false,
+        inverse = true, -- invert background for search, diffs, statuslines and errors
+        contrast = "hard", -- can be "hard", "soft" or empty string
+        palette_overrides = {
+            -- bright_green = "#990000",
+        },
+        overrides = {
+            -- SignColumn = {bg = "#ff9900"} -- specific highlight group
+        },
+        dim_inactive = false,
+        transparent_mode = false,
+    })
+
+
 
 end
 

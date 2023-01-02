@@ -22,8 +22,9 @@ packer.startup(function(use)
 
     use { "nvim-telescope/telescope-file-browser.nvim" }
 
-
+   -- Themes
     use 'folke/tokyonight.nvim'
+    use "ellisonleao/gruvbox.nvim"
 
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
     use 'nvim-treesitter/playground'
