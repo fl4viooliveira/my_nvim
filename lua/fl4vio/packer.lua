@@ -8,9 +8,9 @@ end
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
--- return require('packer').startup(function(use)
+return require('packer').startup(function(use)
 
-packer.startup(function(use)
+-- packer.startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
@@ -30,8 +30,6 @@ packer.startup(function(use)
     use 'nvim-treesitter/playground'
 
     use 'mbbill/undotree'
-
-    use 'tpope/vim-fugitive'
 
     use {
         'VonHeikemen/lsp-zero.nvim',
@@ -136,8 +134,6 @@ packer.startup(function(use)
     use 'projekt0n/github-nvim-theme'
 
     use 'junegunn/gv.vim'
-
-    -- use 'znck/grammarly'
 
 
 
