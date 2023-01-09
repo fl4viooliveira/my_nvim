@@ -37,3 +37,4 @@ vim.opt.wildignore:append { '*/node_modules/*' }
 
 vim.opt.spell = true
 vim.opt.spelllang = "en"
+

@@ -1,10 +1,7 @@
 require'nvim-treesitter.configs'.setup {
   autotag = {
     enable = true,
-    filetypes = {"liquid" , "html" , "xml" },
+    filetypes = { "liquid" },
   }
 }
 
-require('nvim-ts-autotag').setup({
-  filetypes = {"liquid" , "html" , "xml" },
-})
