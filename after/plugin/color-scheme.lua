@@ -57,7 +57,7 @@ function MyColors(color)
         -- or leave it empty to use the default settings
         style = "storm", -- The theme comes in three styles, `storm`, `moon`, a darker variant `night` and `day`
         light_style = "day", -- The theme is used when the background is set to light
-        transparent = false, -- Enable this to disable setting the background color
+        transparent = true, -- Enable this to disable setting the background color
         terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
         styles = {
           -- Style to be applied to different syntax groups
@@ -75,6 +75,38 @@ function MyColors(color)
         hide_inactive_statusline = false, -- Enabling this option, will hide inactive statuslines and replace them with a thin border instead. Should work with the standard **StatusLine** and **LuaLine**.
         dim_inactive = false, -- dims inactive windows
         lualine_bold = false, -- When `true`, section headers in the lualine theme will be bold
+
+
+        on_highlights = function(hl, c)
+          local prompt = "#2d3149"
+          hl.TelescopeNormal = {
+            bg = c.bg_transparent,
+            fg = c.fg_transparent,
+          }
+          hl.TelescopeBorder = {
+            bg = c.bg_transparent,
+            fg = c.bg_transparent,
+          }
+          hl.TelescopePromptNormal = {
+            bg = prompt,
+          }
+          hl.TelescopePromptBorder = {
+            bg = prompt,
+            fg = prompt,
+          }
+          hl.TelescopePromptTitle = {
+            bg = prompt,
+            fg = prompt,
+          }
+          hl.TelescopePreviewTitle = {
+            bg = c.bg_transparent,
+            fg = c.bg_transparent,
+          }
+          hl.TelescopeResultsTitle = {
+            bg = c.bg_transparent,
+            fg = c.bg_transparent,
+          }
+        end,
 
       })
 
