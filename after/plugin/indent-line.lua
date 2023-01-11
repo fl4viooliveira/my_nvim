@@ -11,7 +11,7 @@ require("indent_blankline").setup {
     "IndentBlanklineIndent5",
     "IndentBlanklineIndent6",
   },
-  show_trailing_blankline_indent = false,
+  show_trailing_blankline_indent = true,
 
   -- show_end_of_line = true,
   -- space_char_blankline = " ",
