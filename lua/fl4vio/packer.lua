@@ -131,12 +131,12 @@ return require('packer').startup(function(use)
 
     use 'rcarriga/nvim-notify'
 
-    use 'projekt0n/github-nvim-theme'
-
     use 'junegunn/gv.vim'
     
     use "mattn/emmet-vim" -- Emmet (Ctrl+y ,)
 
     use "tribela/vim-transparent"
+
+    use"tpope/vim-fugitive"
 
 end)
