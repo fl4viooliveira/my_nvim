@@ -35,6 +35,6 @@ vim.opt.clipboard = 'unnamedplus'
 vim.opt.path:append { '**' } -- Finding files - Search down into subfolders
 vim.opt.wildignore:append { '*/node_modules/*' }
 
-vim.opt.spell = true
+-- vim.opt.spell = true
 vim.opt.spelllang = "en"
-
+vim.opt.spellsuggest = 9
