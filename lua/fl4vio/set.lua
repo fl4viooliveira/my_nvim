@@ -8,7 +8,7 @@ vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 
-vim.opt.smartindent = false
+vim.opt.smartindent = true
 
 vim.opt.wrap = false
 
@@ -37,3 +37,9 @@ vim.opt.wildignore:append { '*/node_modules/*' }
 
 -- vim.opt.spell = true
 vim.opt.spelllang = "en"
+
+vim.g.indentLine_char = "┆"
+vim.g.indentLine_bgcolor_gui = '#20222b'
+vim.g.indentLine_color_gui = '#A4E57E'
+
+vim.opt.shell = "zsh"

@@ -8,7 +8,7 @@ function MyColors(color)
       require("gruvbox").setup({
         undercurl = true,
         underline = true,
-        bold = true,
+        bold = false,
         italic = true,
         strikethrough = true,
         invert_selection = false,
@@ -26,6 +26,17 @@ function MyColors(color)
         dim_inactive = false,
         transparent_mode = true,
       })
+
+      -- To Test:
+        -- -- Overwrite the highlight groups
+        -- overrides = function(c)
+        --     return {
+        --         htmlTag = {fg = c.red, bg = "#282c34", sp = c.hint, style = "underline"},
+        --         DiagnosticHint = {link = "LspDiagnosticsDefaultHint"},
+        --         -- this will remove the highlight groups
+        --         TSField = {},
+        --     }
+        -- end
 
 -- TOKYONIGHT
       require("tokyonight").setup({

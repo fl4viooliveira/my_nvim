@@ -8,9 +8,9 @@ end
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
-return require('packer').startup(function(use)
+-- return require('packer').startup(function(use)
 
--- packer.startup(function(use)
+packer.startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
@@ -132,11 +132,16 @@ return require('packer').startup(function(use)
     use 'rcarriga/nvim-notify'
 
     use 'junegunn/gv.vim'
-    
+
     use "mattn/emmet-vim" -- Emmet (Ctrl+y ,)
 
     use "tribela/vim-transparent"
 
-    use"tpope/vim-fugitive"
+    use "tpope/vim-fugitive"
+
+    use "Yggdroot/indentLine"
+
+    use 'norcalli/nvim-colorizer.lua'
+
 
 end)

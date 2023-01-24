@@ -1,9 +1,9 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
 
 vim.keymap.set("n", "<leader>gv", vim.cmd.GV)
 
 vim.keymap.set("n", "<leader>sp", vim.cmd.spe)
+
 
 
 -- Spell Check function
