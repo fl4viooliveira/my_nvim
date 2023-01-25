@@ -25,6 +25,8 @@ packer.startup(function(use)
    -- Themes
     use 'folke/tokyonight.nvim'
     use "ellisonleao/gruvbox.nvim"
+    use { "catppuccin/nvim", as = "catppuccin" }
+
 
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
     use 'nvim-treesitter/playground'
@@ -140,8 +142,6 @@ packer.startup(function(use)
     use "tpope/vim-fugitive"
 
     use "Yggdroot/indentLine"
-
-    use 'norcalli/nvim-colorizer.lua'
 
 
 end)
