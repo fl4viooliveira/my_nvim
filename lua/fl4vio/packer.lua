@@ -143,5 +143,6 @@ packer.startup(function(use)
 
     use "Yggdroot/indentLine"
 
+    use({"L3MON4D3/LuaSnip", tag = "v<CurrentMajor>.*"}) -- Snippet Engine for Neovim written in Lua.
 
 end)

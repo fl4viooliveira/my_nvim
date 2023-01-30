@@ -21,3 +21,15 @@ end
 vim.keymap.set("n", "<leader>s", function()
   vim_opt_toggle("spell", true, false, "Spelling")
 end)
+
+-- :unmap <Alt-3>
+-- :unmap <Alt-3> Esc
+-- :unmap <press Alt-3>
+-- :unmap <press Alt-3> Esc
+--
+-- :map  <A-3> #
+-- :map! <A-3> #
+-- :map  <A-"> #
+-- :map! <A-"> #
+-- :set timeout timeoutlen=5000 ttimeoutlen=250
+
