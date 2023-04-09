@@ -145,4 +145,9 @@ packer.startup(function(use)
 
     use({"L3MON4D3/LuaSnip", tag = "v<CurrentMajor>.*"}) -- Snippet Engine for Neovim written in Lua.
 
+    use "styled-components/vim-styled-components"
+
+    use 'nvim-lua/plenary.nvim'
+
+
 end)
