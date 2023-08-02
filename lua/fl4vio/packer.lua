@@ -3,7 +3,9 @@ if (not status) then
   print("Packer is not installed")
   return
 end
+
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
+
 
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
