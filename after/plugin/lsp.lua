@@ -1,3 +1,8 @@
+local vim =  vim
+
+local cmp_nvim_lsp_setup, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
+if not cmp_nvim_lsp_setup then return end
+
 local lsp = require("lsp-zero")
 
 lsp.preset("recommended")
@@ -5,21 +10,22 @@ lsp.preset("recommended")
 lsp.ensure_installed({
     'tsserver',
     'eslint',
-    -- 'sumneko_lua',
+    "gopls",
     'rust_analyzer',
     'theme_check',
+    -- 'sumneko_lua',
 })
 
 -- Fix Undefined global 'vim'
-lsp.configure('sumneko_lua', {
-    settings = {
-        Lua = {
-            diagnostics = {
-                globals = { 'vim' }
-            }
-        }
-    }
-})
+-- lsp.configure('sumneko_lua', {
+--     settings = {
+--         Lua = {
+--             diagnostics = {
+--                 globals = { 'vim' }
+--             }
+--         }
+--     }
+-- })
 
 
 lsp.setup()
@@ -65,6 +71,60 @@ end
 local lsp_flags = {
   -- This is the default in Nvim 0.7+
   debounce_text_changes = 150,
+}
+
+local capabilities = cmp_nvim_lsp.default_capabilities()
+
+require('lspconfig')['gopls'].setup{
+  capabilities = capabilities,
+  on_attach = on_attach,
+  settings = {
+    gopls = {
+      analyses = {
+        assign = true,
+        atomic = true,
+        bools = true,
+        composites = true,
+        copylocks = true,
+        deepequalerrors = true,
+        embed = true,
+        errorsas = true,
+        fieldalignment = true,
+        httpresponse = true,
+        ifaceassert = true,
+        loopclosure = true,
+        lostcancel = true,
+        nilfunc = true,
+        nilness = true,
+        nonewvars = true,
+        printf = true,
+        shadow = true,
+        shift = true,
+        simplifycompositelit = true,
+        simplifyrange = true,
+        simplifyslice = true,
+        sortslice = true,
+        stdmethods = true,
+        stringintconv = true,
+        structtag = true,
+        testinggoroutine = true,
+        tests = true,
+        timeformat = true,
+        unmarshal = true,
+        unreachable = true,
+        unsafeptr = true,
+        unusedparams = true,
+        unusedresult = true,
+        unusedvariable = true,
+        unusedwrite = true,
+        useany = true,
+      },
+      hoverKind = "FullDocumentation",
+      linkTarget = "pkg.go.dev",
+      usePlaceholders = true,
+      vulncheck = "Imports",
+    },
+  },
 }
 require('lspconfig')['pyright'].setup{
     on_attach = on_attach,

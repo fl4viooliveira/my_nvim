@@ -1,4 +1,5 @@
 local vim = vim
+local os = require"os"
 
 vim.opt.number = true
 vim.opt.relativenumber = true

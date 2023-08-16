@@ -1,3 +1,4 @@
+local vim = vim
 local status, packer = pcall(require, "packer")
 if (not status) then
   print("Packer is not installed")
@@ -150,6 +151,8 @@ packer.startup(function(use)
     use "styled-components/vim-styled-components"
 
     use 'nvim-lua/plenary.nvim'
+
+    use "fatih/vim-go"                        -- https://github.com/fatih/vim-go
 
 
 end)
