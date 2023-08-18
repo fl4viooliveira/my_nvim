@@ -47,7 +47,7 @@ vim.g.indentLine_color_gui = '#A4E57E'
 
 vim.opt.shell = "zsh"
 
-vim.g.conceallevel = 0 -- so that `` is visible in markdown files
+vim.opt.conceallevel = 0 -- so that `` is visible in markdown files
 vim.g.vim_json_syntax_conceal = 0
 vim.opt.fileencoding = "utf-8" -- the encoding written to a file
 
