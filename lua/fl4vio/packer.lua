@@ -67,21 +67,23 @@ packer.startup(function(use)
 
     use {"folke/trouble.nvim", cmd = "TroubleToggle"}
 
+    use "norcalli/nvim-colorizer.lua"
 
-    use {
-        "norcalli/nvim-colorizer.lua",
-        config = function()
-            require("colorizer").setup({ "css", "scss", "html", "javascript" }, {
-                RGB = true, -- #RGB hex codes
-                RRGGBB = true, -- #RRGGBB hex codes
-                RRGGBBAA = true, -- #RRGGBBAA hex codes
-                rgb_fn = true, -- CSS rgb() and rgba() functions
-                hsl_fn = true, -- CSS hsl() and hsla() functions
-                css = true, -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
-                css_fn = true, -- Enable all CSS *functions*: rgb_fn, hsl_fn
-            })
-        end,
-    }
+    -- use {
+    --     "norcalli/nvim-colorizer.lua",
+    --     config = function()
+    --         require("colorizer").setup({ "css", "scss", "html", "javascript", "typescript" }, {
+    --           RGB       =          true,          --           #RGB        hex    codes
+    --           RRGGBB    =          true,          --           #RRGGBB     hex    codes
+    --           RRGGBBAA  =          true,          --           #RRGGBBAA   hex    codes
+    --           rgb_fn    =          true,          --           CSS         rgb()  and      rgba()        functions
+    --           hsl_fn    =          true,          --           CSS         hsl()  and      hsla()        functions
+    --           css       =          true,          --           Enable      all    CSS      features:     rgb_fn,    hsl_fn,  names,  RGB,  RRGGBB
+    --           css_fn    =          true,          --           Enable      all    CSS      *functions*:  rgb_fn,    hsl_fn
+    --           scss_fn    =         true,          --           Enable      all    SCSS     *functions*:  rgb_fn,    hsl_fn
+    --         })
+    --     end,
+    -- }
 
     use 'windwp/nvim-autopairs'
     use 'windwp/nvim-ts-autotag'
@@ -154,5 +156,10 @@ packer.startup(function(use)
 
     use "fatih/vim-go"                        -- https://github.com/fatih/vim-go
 
+    use ({"ziontee113/color-picker.nvim",
+    config = function()
+        require("color-picker")
+    end,
+})
 
 end)
