@@ -287,6 +287,11 @@ _G.packer_plugins = {
     path = "/Users/flavio/.local/share/nvim/site/pack/packer/opt/trouble.nvim",
     url = "https://github.com/folke/trouble.nvim"
   },
+  ["typescript-styled-plugin"] = {
+    loaded = true,
+    path = "/Users/flavio/.local/share/nvim/site/pack/packer/start/typescript-styled-plugin",
+    url = "https://github.com/styled-components/typescript-styled-plugin"
+  },
   undotree = {
     loaded = true,
     path = "/Users/flavio/.local/share/nvim/site/pack/packer/start/undotree",

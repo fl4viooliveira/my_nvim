@@ -160,6 +160,8 @@ packer.startup(function(use)
     config = function()
         require("color-picker")
     end,
+    
+    use "styled-components/typescript-styled-plugin" -- TypeScript server plugin that adds intellisense to styled component css strings
 })
 
 end)
