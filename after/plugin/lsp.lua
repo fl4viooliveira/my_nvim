@@ -58,7 +58,7 @@ vim.diagnostic.config({
 ---------------------------------
 -- Auto commands
 ---------------------------------
-vim.cmd([[ autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]])
+-- vim.cmd([[ autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]])
 
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
